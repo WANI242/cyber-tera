@@ -3,6 +3,7 @@ CYBER TERA WEBSITE - MAINTENANCE NOTES
 
 Before going live
 -----------------
+0. For a full go-live checklist of every token and file, see REPLACEMENTS.md.
 1. Replace the placeholder domain `https://REPLACE_ME.example` in the
    following files with your production origin (e.g. https://cybertera.ug):
      - robots.txt
