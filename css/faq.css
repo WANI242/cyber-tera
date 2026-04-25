@@ -1,0 +1,83 @@
+/* Page-specific: full FAQ listing page. Shared UI in styles.css. */
+
+.faq-hero {
+    background:
+        linear-gradient(rgba(3, 21, 45, 0.55), rgba(3, 21, 45, 0.88)),
+        url('../images/faq.png') center center/cover no-repeat;
+    min-height: 60vh;
+}
+
+.faq-page .faq-list {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    gap: 14px;
+    margin: 0 auto;
+    max-width: 900px;
+    counter-reset: none;
+}
+
+.faq-page .faq-item {
+    background: rgba(34, 79, 117, 0.18);
+    border: 1px solid rgba(99, 148, 158, 0.18);
+    border-radius: var(--radius-md);
+    box-shadow: 0 2px 8px rgba(99, 148, 158, 0.08);
+    padding: 0;
+    overflow: hidden;
+}
+.faq-page .faq-item::before {
+    display: none;
+}
+
+.faq-page .faq-item > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 48px 18px 24px;
+    color: var(--four);
+    font-size: 1.05rem;
+    font-weight: 600;
+    position: relative;
+    transition: background 0.2s, color 0.2s;
+}
+.faq-page .faq-item > summary::-webkit-details-marker {
+    display: none;
+}
+.faq-page .faq-item > summary::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform 0.25s ease;
+}
+.faq-page .faq-item[open] > summary::after {
+    transform: translateY(-30%) rotate(-135deg);
+}
+.faq-page .faq-item > summary:hover,
+.faq-page .faq-item[open] > summary {
+    background: rgba(34, 79, 117, 0.35);
+    color: var(--cta);
+}
+.faq-page .faq-item > summary:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: -3px;
+    border-radius: var(--radius-md);
+}
+
+.faq-page .faq-item p {
+    color: var(--five);
+    font-size: 1.05rem;
+    margin: 0;
+    padding: 4px 24px 20px 24px;
+    line-height: 1.65;
+}
+
+.faq-page .faq-section {
+    background: transparent;
+    box-shadow: none;
+    padding: 32px 16px;
+}

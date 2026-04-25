@@ -1,0 +1,24 @@
+{
+    "name": "CYBER TERA Uganda",
+    "short_name": "CYBER TERA",
+    "description": "Integrated security, electrical, and computer networking services in Jinja and across Uganda.",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#03152d",
+    "theme_color": "#03152d",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "maskable"
+        }
+    ]
+}

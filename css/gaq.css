@@ -1,0 +1,267 @@
+/* Page-specific: Get a Quote form + Contact block. Shared UI in styles.css. */
+
+.get-a-quote-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 48px 16px 32px 16px;
+}
+
+.get-a-quote-info {
+    background: rgba(3, 21, 45, 0.92);
+    color: var(--five);
+    padding: 36px 28px 28px 28px;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 24px rgba(99, 148, 158, 0.12);
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.get-a-quote-info h1 {
+    color: var(--heading);
+    font-size: 2rem;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.get-a-quote-info > p {
+    color: var(--muted);
+    font-size: 1.08rem;
+    margin-bottom: 28px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.quote-form label {
+    font-weight: 500;
+    margin-bottom: 2px;
+    color: var(--five);
+    text-align: left;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--four);
+    background: var(--two);
+    color: var(--five);
+    font-size: 1rem;
+    margin-bottom: 4px;
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+    font-family: inherit;
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+    border: 1.5px solid var(--cta);
+    background: var(--three);
+}
+
+.quote-form .field-hint {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: -4px;
+}
+
+.quote-form .field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.quote-form .field-error {
+    color: #ffb3ba;
+    font-size: 0.88rem;
+    min-height: 1em;
+    line-height: 1.2;
+    display: block;
+}
+.quote-form .field-error:empty {
+    display: none;
+}
+
+.quote-form input.is-invalid,
+.quote-form select.is-invalid,
+.quote-form textarea.is-invalid {
+    border-color: #ff6b7a;
+    background: rgba(220, 53, 69, 0.15);
+}
+
+.quote-form .consent-error {
+    margin-top: -4px;
+}
+
+.quote-form .what-to-expect {
+    color: var(--muted-strong);
+    font-size: 0.92rem;
+    margin: 4px 0 0 0;
+    padding: 10px 14px;
+    background: rgba(34, 79, 117, 0.25);
+    border-left: 3px solid var(--four);
+    border-radius: var(--radius-sm);
+    line-height: 1.5;
+}
+
+.quote-form .honeypot {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--five);
+    margin: 10px 0 6px 0;
+    line-height: 1.5;
+}
+
+.consent input[type="checkbox"] {
+    margin-top: 4px;
+    width: 18px;
+    height: 18px;
+}
+
+.consent a {
+    color: var(--cta);
+    text-decoration: underline;
+}
+
+.quote-form button[type="submit"] {
+    background: var(--cta);
+    color: var(--one);
+    border: 1px solid rgba(242, 181, 68, 0.35);
+    border-radius: var(--radius-sm);
+    padding: 12px 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, color 0.2s, opacity 0.2s;
+}
+
+.quote-form button[type="submit"]:hover:not(:disabled) {
+    background: var(--cta-hover);
+}
+
+.quote-form button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-banner {
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 0.98rem;
+    margin-bottom: 12px;
+}
+
+.form-banner.success {
+    background: rgba(46, 160, 67, 0.2);
+    color: #b7f3c2;
+    border: 1px solid rgba(46, 160, 67, 0.4);
+}
+
+.form-banner.error {
+    background: rgba(220, 53, 69, 0.2);
+    color: #ffd0d4;
+    border: 1px solid rgba(220, 53, 69, 0.4);
+}
+
+.form-banner[hidden] {
+    display: none;
+}
+
+/* Contact section below the form. */
+.contact-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px 24px;
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-section h2 {
+    color: var(--four);
+    margin: 0 0 24px 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background: rgba(34, 79, 117, 0.2);
+    border-radius: var(--radius-md);
+    padding: 22px 20px;
+    text-align: center;
+    transition: transform 0.2s, background 0.2s;
+    text-decoration: none;
+    color: var(--five);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(99, 148, 158, 0.15);
+}
+
+.contact-card:hover {
+    transform: translateY(-2px);
+    background: rgba(34, 79, 117, 0.35);
+}
+
+.contact-card i,
+.contact-card .icon {
+    font-size: 1.8rem;
+    color: var(--four);
+}
+.contact-card .icon--lg {
+    width: 32px;
+    height: 32px;
+}
+
+.contact-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--heading);
+}
+
+.contact-card p,
+.contact-card span {
+    margin: 0;
+    font-size: 0.98rem;
+    color: var(--muted-strong);
+}
+
+.contact-hours {
+    text-align: center;
+    margin-top: 24px;
+    color: var(--muted);
+    font-size: 0.95rem;
+}

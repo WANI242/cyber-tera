@@ -1,0 +1,6 @@
+# Replace https://REPLACE_ME.example below with your production origin
+# (e.g. https://cybertera.ug) before going live.
+User-agent: *
+Allow: /
+
+Sitemap: https://REPLACE_ME.example/sitemap.xml

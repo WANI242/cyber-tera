@@ -1,0 +1,7 @@
+/* Page-specific: Electrical hero background. Shared card layout imported from network.css. */
+
+.elec-hero {
+    background:
+        linear-gradient(rgba(3, 21, 45, 0.55), rgba(3, 21, 45, 0.85)),
+        url('../images/engineering.png') center center/cover no-repeat;
+}

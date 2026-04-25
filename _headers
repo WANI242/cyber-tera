@@ -1,0 +1,32 @@
+# Security & caching headers for Netlify / Cloudflare Pages.
+# (If hosting elsewhere, translate these to your host's header syntax.)
+#
+# Tighten the CSP further once you've picked final third-party scripts.
+#   - Currently allows Google Fonts CSS + font files, Google Maps embeds,
+#     Formspree form submission, Cloudflare Web Analytics, and inline
+#     <style>/<script> blocks that the site uses for JSON-LD and small helpers.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://plausible.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://formspree.io https://plausible.io; frame-src https://www.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io
+
+# Long-cache static assets
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/javascript/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML should revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

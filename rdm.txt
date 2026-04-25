@@ -1,0 +1,112 @@
+CYBER TERA WEBSITE - MAINTENANCE NOTES
+=======================================
+
+Before going live
+-----------------
+1. Replace the placeholder domain `https://REPLACE_ME.example` in the
+   following files with your production origin (e.g. https://cybertera.ug):
+     - robots.txt
+     - sitemap.xml
+     - every *.html file (search for "REPLACE_ME.example" across the repo;
+       it shows up in <link rel="canonical">, og:image, og:url, twitter:image,
+       and the JSON-LD schema blocks).
+2. Replace the remaining REPLACE_ME tokens:
+     - REPLACE_ME_FORMSPREE_ID     in javascript/quote.js
+     - REPLACE_ME_CF_TOKEN         in javascript/analytics.js (or enable
+                                   Plausible instead - see comments in file)
+     - REPLACE_ME_GBP_URL          in pages/gaq.html (Google Business Profile)
+     - https://facebook.com/REPLACE_ME  (and twitter/instagram/linkedin) in
+                                   partials/footer.html, javascript/index.js,
+                                   and the sameAs array of the LocalBusiness
+                                   JSON-LD in index.html.
+3. Refresh the <lastmod> dates in sitemap.xml - or just run `npm run build`,
+   which does it for you.
+4. Drop real 1200x630 OG images into images/og/ (see images/og/README.md for
+   the naming convention).
+
+Site structure
+--------------
+- index.html ................ Home
+- 404.html .................. Custom not-found page (served automatically by
+                              most static hosts)
+- pages/*.html .............. Inner pages (services, cctv, elec, network,
+                              case-scenarios, about, faq, gaq) plus the three
+                              local service-area pages (cctv-jinja,
+                              cctv-kampala, electrical-kampala).
+- blog/index.html, blog/first-post.html ... Blog scaffold.
+- privacy.html .............. Privacy policy (linked from the form and footer)
+- partials/header.html ...... Human-readable copy of the header markup
+- partials/footer.html ...... Human-readable copy of the footer markup
+- css/styles.css ............ Single source of truth for shared UI
+- css/*.css ................. Page-specific overrides (dup rules removed)
+- javascript/index.js ....... Injects the header + footer (templates are
+                              inlined as JS strings so the site also works
+                              when opened via file://), runs the hamburger
+                              menu, marks the active nav link, injects the
+                              floating WhatsApp + quote CTAs and the
+                              scroll-to-top button, and loads analytics.
+                              If you edit partials/header.html or
+                              partials/footer.html, copy the changes into
+                              the HEADER_TEMPLATE / FOOTER_TEMPLATE strings
+                              in javascript/index.js as well. `npm run check`
+                              will catch a mismatch.
+- javascript/quote.js ....... Submits the quote form to Formspree via fetch()
+                              with a honeypot field, 60s client-side rate
+                              limit, and per-field inline validation.
+- javascript/analytics.js ... Privacy-friendly analytics loader (Cloudflare
+                              Web Analytics by default; Plausible option
+                              commented in). No cookies, no consent banner.
+- images/icons.svg .......... Inline SVG sprite used via <svg><use>.
+                              Replaces Font Awesome.
+- images/og/ ................ Per-page Open Graph social-card images.
+- fonts/README.md ........... Instructions for self-hosting the Inter webfont.
+- build.mjs ................. Tiny Node build script. Run with `npm run build`.
+                              Generates WebP + AVIF + resized image variants,
+                              updates sitemap.xml <lastmod>, and verifies that
+                              the inlined header/footer templates match the
+                              partials/*.html copies.
+- package.json .............. Build-step dependencies (sharp, fast-glob).
+- _headers, _redirects ...... Netlify / Cloudflare Pages config.
+
+Each page declares <html data-base="">  (root pages)
+                or <html data-base="../"> (files under /pages/ or /blog/)
+so the partial loader can inject header/footer links with correct relative paths.
+
+Get a Quote form
+----------------
+- Currently uses Formspree (https://formspree.io/).
+    1. Create a form at https://formspree.io/forms
+    2. Copy the form endpoint (looks like https://formspree.io/f/xayzqwer)
+    3. Paste it into FORMSPREE_ENDPOINT at the top of javascript/quote.js.
+  Formspree will email you on every submission.
+- Abuse protection relies on:
+    (a) the honeypot field `website` (bots that fill it are silently dropped),
+    (b) the 60-second localStorage rate limit,
+    (c) the privacy-policy consent checkbox,
+    (d) Formspree's own anti-spam filtering.
+  If you still receive spam, add a reCAPTCHA or Turnstile widget and gate
+  the fetch() call on its token.
+
+Build step
+----------
+Prerequisites: Node 18+. One-time setup:
+
+    npm install
+
+Usage:
+
+    npm run build           # images + sitemap + partial sync check
+    npm run build:images    # regenerate WebP / AVIF / responsive variants
+    npm run build:sitemap   # refresh sitemap.xml <lastmod> to today
+    npm run check           # verify HEADER_TEMPLATE / FOOTER_TEMPLATE match partials/
+
+Local development
+-----------------
+You can preview the site by double-clicking `index.html` directly
+(header and footer are injected from inlined JS templates, so nothing
+relies on `fetch()`). For a more realistic preview with proper routing
+and relative-URL behaviour, you can still serve the folder, e.g.:
+
+    python -m http.server 8000
+
+then open http://localhost:8000/ in your browser.

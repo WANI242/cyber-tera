@@ -1,0 +1,8 @@
+# Netlify / Cloudflare Pages redirects.
+# Ensure legacy URL shapes resolve cleanly.
+
+/blog            /blog/index.html            200
+/privacy         /privacy.html               301
+
+# Catch-all 404 (hosts that honour this syntax; otherwise 404.html is picked up automatically)
+/*               /404.html                   404

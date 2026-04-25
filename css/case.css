@@ -1,0 +1,115 @@
+/* Page-specific: Case Scenarios hero background + case-study cards.
+   Shared UI lives in styles.css. */
+
+.case-hero {
+    background:
+        linear-gradient(rgba(3, 21, 45, 0.55), rgba(3, 21, 45, 0.88)),
+        url('../images/case.png') center center/cover no-repeat;
+}
+
+.case-studies {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+    padding: 32px 0 16px 0;
+}
+.case-studies > h2 {
+    color: var(--four);
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.case-study {
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) 1.4fr;
+    gap: 24px;
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid rgba(99, 148, 158, 0.18);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-md);
+}
+
+.case-study-media {
+    background: rgba(34, 79, 117, 0.25);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 3 / 2;
+    padding: 24px;
+}
+.case-study-media img {
+    width: 100%;
+    height: auto;
+    max-width: 220px;
+    object-fit: contain;
+}
+
+.case-study-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.case-study-tag {
+    align-self: flex-start;
+    background: rgba(242, 181, 68, 0.18);
+    color: var(--accent);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.case-study-body h3 {
+    color: var(--heading);
+    font-size: 1.25rem;
+    margin: 0;
+    line-height: 1.3;
+}
+.case-study-detail {
+    margin: 8px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.case-study-detail > div {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 12px;
+    align-items: start;
+}
+.case-study-detail dt {
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    padding-top: 2px;
+}
+.case-study-detail dd {
+    color: var(--text);
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+@media (max-width: 780px) {
+    .case-study {
+        grid-template-columns: 1fr;
+    }
+    .case-study-media {
+        aspect-ratio: 16 / 9;
+    }
+    .case-study-detail > div {
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+}

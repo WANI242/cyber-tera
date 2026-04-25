@@ -1,0 +1,7 @@
+/* Page-specific: CCTV hero background. Shared card layout imported from network.css. */
+
+.cctv-hero {
+    background:
+        linear-gradient(rgba(3, 21, 45, 0.55), rgba(3, 21, 45, 0.85)),
+        url('../images/img11.jpg') center center/cover no-repeat;
+}

@@ -1,0 +1,89 @@
+/* Page-specific: About Us hero overrides and team layout.
+   Shared UI lives in styles.css. */
+
+.about-hero {
+    background:
+        linear-gradient(rgba(3, 21, 45, 0.55), rgba(3, 21, 45, 0.88)),
+        url('../images/engineers.png') center center/cover no-repeat;
+    min-height: 70vh;
+}
+
+.about-hero h1 {
+    text-align: center;
+    color: var(--heading);
+    font-size: 2.2rem;
+    margin: 2rem 1rem 1rem 1rem;
+}
+
+.team-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto 0 auto;
+    padding: 48px 24px;
+    text-align: center;
+}
+.team-section h2 {
+    color: var(--four);
+    font-size: 2rem;
+    margin: 0 0 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: var(--surface);
+    border: 1px solid rgba(99, 148, 158, 0.18);
+    border-radius: var(--radius-md);
+    padding: 28px 20px;
+    margin: 0;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.team-avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    color: var(--one);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin: 0 auto 16px auto;
+    letter-spacing: 1px;
+}
+
+.team-card h3 {
+    color: var(--heading);
+    margin: 0 0 4px 0;
+    font-size: 1.15rem;
+}
+.team-role {
+    color: var(--accent);
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    font-size: 0.92rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.team-bio {
+    color: var(--muted-strong);
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
