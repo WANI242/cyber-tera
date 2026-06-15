@@ -18,10 +18,10 @@
 }
 
 .faq-page .faq-item {
-    background: rgba(34, 79, 117, 0.18);
-    border: 1px solid rgba(99, 148, 158, 0.18);
+    background: var(--panel);
+    border: 1px solid var(--line);
     border-radius: var(--radius-md);
-    box-shadow: 0 2px 8px rgba(99, 148, 158, 0.08);
+    box-shadow: 0 10px 30px rgba(16, 36, 60, 0.08);
     padding: 0;
     overflow: hidden;
 }
@@ -33,7 +33,7 @@
     list-style: none;
     cursor: pointer;
     padding: 18px 48px 18px 24px;
-    color: var(--four);
+    color: var(--ink);
     font-size: 1.05rem;
     font-weight: 600;
     position: relative;
@@ -59,8 +59,8 @@
 }
 .faq-page .faq-item > summary:hover,
 .faq-page .faq-item[open] > summary {
-    background: rgba(34, 79, 117, 0.35);
-    color: var(--cta);
+    background: var(--panel-alt);
+    color: var(--teal-dark);
 }
 .faq-page .faq-item > summary:focus-visible {
     outline: 3px solid var(--focus);
@@ -69,7 +69,7 @@
 }
 
 .faq-page .faq-item p {
-    color: var(--five);
+    color: var(--ink-muted);
     font-size: 1.05rem;
     margin: 0;
     padding: 4px 24px 20px 24px;
@@ -79,5 +79,5 @@
 .faq-page .faq-section {
     background: transparent;
     box-shadow: none;
-    padding: 32px 16px;
+    padding: 40px 16px;
 }

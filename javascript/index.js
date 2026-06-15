@@ -37,42 +37,78 @@ const HEADER_TEMPLATE = `
 `;
 
 const FOOTER_TEMPLATE = `
-<div class="footer-section links">
-    <h3>Quick Links</h3>
-    <ul>
-        <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#home"/></svg><a href="{{BASE}}index.html">Home</a></li>
-        <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#cogs"/></svg><a href="{{BASE}}pages/services.html">Services</a></li>
-        <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#briefcase"/></svg><a href="{{BASE}}pages/case-scenarios.html">Case Scenarios</a></li>
-        <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#info-circle"/></svg><a href="{{BASE}}pages/about.html">About</a></li>
-        <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#file-signature"/></svg><a href="{{BASE}}blog/index.html">Blog</a></li>
-        <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#envelope"/></svg><a href="{{BASE}}pages/gaq.html#contact">Contact</a></li>
-    </ul>
-</div>
-<div class="footer-section contact">
-    <h3>Contact</h3>
-    <ul class="contact-info">
-        <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#envelope"/></svg> <a href="mailto:cyberteraug@gmail.com">cyberteraug@gmail.com</a></li>
-        <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#phone"/></svg> <a href="tel:+256705271978">+256 705 271 978</a></li>
-        <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#map-marker"/></svg> The Innovation Village, Plot 5 Main Street, Jinja City</li>
-    </ul>
-</div>
-<div class="footer-section">
-    <h3>Follow Us</h3>
-    <div class="footer-social">
-        <a href="https://facebook.com/REPLACE_ME" aria-label="Facebook" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#facebook"/></svg></a>
-        <a href="https://twitter.com/REPLACE_ME" aria-label="Twitter / X" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#twitter"/></svg></a>
-        <a href="https://instagram.com/REPLACE_ME" aria-label="Instagram" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#instagram"/></svg></a>
-        <a href="https://linkedin.com/company/REPLACE_ME" aria-label="LinkedIn" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#linkedin"/></svg></a>
+<div class="footer-cta">
+    <div>
+        <p class="footer-kicker">Site survey and setup</p>
+        <h2>Ready to plan your CCTV, network, or electrical work?</h2>
+        <p>Share the property type, location, and the problem you want solved. We will help you choose the right next step.</p>
     </div>
-</div>
-<div class="footer-section faq">
-    <a href="{{BASE}}pages/faq.html">
-        <h3>FAQ</h3>
-        <p>Have questions about our services? You'll find answers to some of the most common inquiries on our FAQ page. If you don't see what you're looking for, please don't hesitate to contact us directly!</p>
+    <a class="footer-cta-link" href="{{BASE}}pages/gaq.html">
+        <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#file-signature"/></svg>
+        Get a quote
     </a>
 </div>
+<div class="footer-main">
+    <div class="footer-brand">
+        <a class="footer-logo" href="{{BASE}}index.html" aria-label="CYBER TERA Uganda home">
+            <img src="{{BASE}}images/web_logo.svg" alt="CYBER TERA Uganda" width="96" height="96">
+        </a>
+        <p>CYBER TERA Uganda designs and installs CCTV, networking, and electrical systems for homes, shops, offices, and industrial sites.</p>
+        <div class="footer-badges" aria-label="Service coverage">
+            <span>Jinja</span>
+            <span>Kampala</span>
+            <span>Uganda-wide</span>
+        </div>
+    </div>
+    <div class="footer-section footer-nav">
+        <h3>Services</h3>
+        <ul>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#video"/></svg><a href="{{BASE}}pages/cctv.html">CCTV &amp; access control</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#network-wired"/></svg><a href="{{BASE}}pages/network.html">Networking</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#bolt"/></svg><a href="{{BASE}}pages/elec.html">Electrical</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#cogs"/></svg><a href="{{BASE}}pages/services.html">All services</a></li>
+        </ul>
+    </div>
+    <div class="footer-section footer-nav">
+        <h3>Company</h3>
+        <ul>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#briefcase"/></svg><a href="{{BASE}}pages/case-scenarios.html">Case scenarios</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#info-circle"/></svg><a href="{{BASE}}pages/about.html">About us</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#file-signature"/></svg><a href="{{BASE}}blog/index.html">Blog</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#headset"/></svg><a href="{{BASE}}pages/faq.html">FAQ</a></li>
+        </ul>
+    </div>
+    <div class="footer-section footer-contact">
+        <h3>Contact</h3>
+        <ul class="contact-info">
+            <li>
+                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#envelope"/></svg>
+                <span><strong>Email</strong><a href="mailto:cyberteraug@gmail.com">cyberteraug@gmail.com</a></span>
+            </li>
+            <li>
+                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#phone"/></svg>
+                <span><strong>Phone</strong><a href="tel:+256705271978">+256 705 271 978</a></span>
+            </li>
+            <li>
+                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#map-marker"/></svg>
+                <span><strong>Office</strong>The Innovation Village, Plot 5 Main Street, Jinja City</span>
+            </li>
+        </ul>
+        <div class="footer-contact-actions">
+            <a class="footer-action footer-action--whatsapp" href="https://wa.me/256705271978" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#whatsapp"/></svg>
+                WhatsApp
+            </a>
+            <a class="footer-action" href="{{BASE}}pages/gaq.html#contact">
+                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#envelope"/></svg>
+                Contact form
+            </a>
+        </div>
+    </div>
+</div>
 <div class="footer-bottom">
-    &copy; 2026 CYBER TERA UGANDA LIMITED. All rights reserved. &middot; <a href="{{BASE}}privacy.html">Privacy Policy</a>
+    <span>&copy; 2026 CYBER TERA UGANDA LIMITED. All rights reserved.</span>
+    <a href="{{BASE}}privacy.html">Privacy Policy</a>
 </div>
 `;
 
