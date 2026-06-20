@@ -39,9 +39,9 @@ const HEADER_TEMPLATE = `
 const FOOTER_TEMPLATE = `
 <div class="footer-cta">
     <div>
-        <p class="footer-kicker">Site survey and setup</p>
-        <h2>Ready to plan your CCTV, network, or electrical work?</h2>
-        <p>Share the property type, location, and the problem you want solved. We will help you choose the right next step.</p>
+        <p class="footer-kicker">Complete infrastructure solutions</p>
+        <h2>Ready to enhance your security, networks, IT systems, or electrical infrastructure?</h2>
+        <p>Share your requirements and location. Our experts will help you choose the right solution for your needs.</p>
     </div>
     <a class="footer-cta-link" href="{{BASE}}pages/gaq.html">
         <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#file-signature"/></svg>
@@ -53,7 +53,7 @@ const FOOTER_TEMPLATE = `
         <a class="footer-logo" href="{{BASE}}index.html" aria-label="CYBER TERA Uganda home">
             <img src="{{BASE}}images/web_logo.svg" alt="CYBER TERA Uganda" width="96" height="96">
         </a>
-        <p>CYBER TERA Uganda designs and installs CCTV, networking, and electrical systems for homes, shops, offices, and industrial sites.</p>
+        <p>CYBER TERA Uganda provides integrated security, networking, electrical, IT consultancy, and AI-powered solutions for homes, businesses, and industries across Uganda.</p>
         <div class="footer-badges" aria-label="Service coverage">
             <span>Jinja</span>
             <span>Kampala</span>
@@ -66,6 +66,8 @@ const FOOTER_TEMPLATE = `
             <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#video"/></svg><a href="{{BASE}}pages/cctv.html">CCTV &amp; access control</a></li>
             <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#network-wired"/></svg><a href="{{BASE}}pages/network.html">Networking</a></li>
             <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#bolt"/></svg><a href="{{BASE}}pages/elec.html">Electrical</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#shield"/></svg><a href="{{BASE}}pages/cybersecurity.html">Cybersecurity</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#drafting-compass"/></svg><a href="{{BASE}}pages/design.html">System design</a></li>
             <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#cogs"/></svg><a href="{{BASE}}pages/services.html">All services</a></li>
         </ul>
     </div>
