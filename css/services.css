@@ -80,6 +80,8 @@
     margin-top: 28px;
     font-size: 1rem;
     font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
     text-decoration: none;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 16px rgba(242, 181, 68, 0.26);
@@ -182,6 +184,8 @@
 
 .service-btn {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: var(--cta);
     color: var(--one);
     border: 1px solid rgba(242, 181, 68, 0.35);
@@ -189,6 +193,8 @@
     padding: 10px 28px;
     font-size: 1.1rem;
     font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
     text-decoration: none;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 16px rgba(242, 181, 68, 0.24);

@@ -44,7 +44,7 @@ const FOOTER_TEMPLATE = `
         <p>Share your requirements and location. Our experts will help you choose the right solution for your needs.</p>
     </div>
     <a class="footer-cta-link" href="{{BASE}}pages/gaq.html">
-        <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#file-signature"/></svg>
+        <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#file-signature"/></svg>
         Get a quote
     </a>
 </div>
@@ -63,46 +63,46 @@ const FOOTER_TEMPLATE = `
     <div class="footer-section footer-nav">
         <h3>Services</h3>
         <ul>
-            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#video"/></svg><a href="{{BASE}}pages/cctv.html">CCTV &amp; access control</a></li>
-            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#network-wired"/></svg><a href="{{BASE}}pages/network.html">Networking</a></li>
-            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#bolt"/></svg><a href="{{BASE}}pages/elec.html">Electrical</a></li>
-            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#shield"/></svg><a href="{{BASE}}pages/cybersecurity.html">Cybersecurity</a></li>
-            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#drafting-compass"/></svg><a href="{{BASE}}pages/design.html">System design</a></li>
-            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#cogs"/></svg><a href="{{BASE}}pages/services.html">All services</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#video"/></svg><a href="{{BASE}}pages/cctv.html">CCTV &amp; access control</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#network-wired"/></svg><a href="{{BASE}}pages/network.html">Networking</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#bolt"/></svg><a href="{{BASE}}pages/elec.html">Electrical</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#shield"/></svg><a href="{{BASE}}pages/cybersecurity.html">Cybersecurity</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#drafting-compass"/></svg><a href="{{BASE}}pages/design.html">System design</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#cogs"/></svg><a href="{{BASE}}pages/services.html">All services</a></li>
         </ul>
     </div>
     <div class="footer-section footer-nav">
         <h3>Company</h3>
         <ul>
-            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#briefcase"/></svg><a href="{{BASE}}pages/case-scenarios.html">Case scenarios</a></li>
-            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#info-circle"/></svg><a href="{{BASE}}pages/about.html">About us</a></li>
-            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#file-signature"/></svg><a href="{{BASE}}blog/index.html">Blog</a></li>
-            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#headset"/></svg><a href="{{BASE}}pages/faq.html">FAQ</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#briefcase"/></svg><a href="{{BASE}}pages/case-scenarios.html">Case scenarios</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#info-circle"/></svg><a href="{{BASE}}pages/about.html">About us</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#file-signature"/></svg><a href="{{BASE}}blog/index.html">Blog</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#headset"/></svg><a href="{{BASE}}pages/faq.html">FAQ</a></li>
         </ul>
     </div>
     <div class="footer-section footer-contact">
         <h3>Contact</h3>
         <ul class="contact-info">
             <li>
-                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#envelope"/></svg>
+                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#envelope"/></svg>
                 <span><strong>Email</strong><a href="mailto:cyberteraug@gmail.com">cyberteraug@gmail.com</a></span>
             </li>
             <li>
-                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#phone"/></svg>
+                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#phone"/></svg>
                 <span><strong>Phone</strong><a href="tel:+256705271978">+256 705 271 978</a></span>
             </li>
             <li>
-                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#map-marker"/></svg>
+                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#map-marker"/></svg>
                 <span><strong>Office</strong>The Innovation Village, Plot 5 Main Street, Jinja City</span>
             </li>
         </ul>
         <div class="footer-contact-actions">
             <a class="footer-action footer-action--whatsapp" href="https://wa.me/256705271978" target="_blank" rel="noopener">
-                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#whatsapp"/></svg>
+                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#whatsapp"/></svg>
                 WhatsApp
             </a>
             <a class="footer-action" href="{{BASE}}pages/gaq.html#contact">
-                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg#envelope"/></svg>
+                <svg class="icon" aria-hidden="true"><use href="{{BASE}}images/icons.svg?v=20260628-icons#envelope"/></svg>
                 Contact form
             </a>
         </div>

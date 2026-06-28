@@ -147,6 +147,10 @@
 }
 
 .quote-form button[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     background: var(--cta);
     color: var(--one);
     border: 1px solid rgba(242, 181, 68, 0.35);
@@ -154,6 +158,8 @@
     padding: 12px 0;
     font-weight: 700;
     font-size: 1.1rem;
+    line-height: 1.2;
+    text-align: center;
     cursor: pointer;
     margin-top: 8px;
     transition: background 0.2s, color 0.2s, opacity 0.2s;

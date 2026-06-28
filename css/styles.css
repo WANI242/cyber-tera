@@ -207,6 +207,23 @@ header {
     box-shadow: 0 8px 20px rgba(242, 181, 68, 0.3);
 }
 
+.btn-cta,
+.btn button,
+.hero-info button,
+.hero-info .btn-cta,
+.hero-actions .btn-cta,
+.btn-secondary,
+.link-more,
+.home-contact-actions a,
+.footer-cta-link,
+.footer-action,
+.btn-cta--outline {
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    text-align: center;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -801,7 +818,7 @@ header {
     font-size: 1.1rem;
 }
 .faq-section .link-more {
-    display: inline-block;
+    display: inline-flex;
     text-decoration: none;
     margin: 40px auto 0 auto;
     color: var(--four);
@@ -1111,6 +1128,7 @@ header {
 .home-contact-actions a {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     background: var(--surface);
     color: var(--five);
@@ -2311,10 +2329,14 @@ footer#site-footer a {
 
 /* ===================== ICON SPRITE HELPER ===================== */
 .icon {
+    display: inline-block;
     width: 1.1em;
     height: 1.1em;
+    min-width: 1.1em;
+    min-height: 1.1em;
     vertical-align: -0.15em;
     fill: currentColor;
+    stroke: currentColor;
     flex-shrink: 0;
 }
 .icon--inline {
